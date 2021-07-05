@@ -8,8 +8,9 @@
             <th>ContactNumber</th>
             <th>Email</th>
             <th>Password</th>
+            <th>Actions</th>
             <th>PatientName</th>
-            <th>DoctorName</th>
+            <th>DoctorName</th> 
         </tr>
     </thead>
     <tbody>
@@ -20,13 +21,28 @@
             <td> {{admin.contactNumber}} </td>
             <td> {{admin.email}}</td>
             <td> {{admin.password}}</td>
-            <td *ngFor = "let patients of admin.patients" >
-                {{patients.patientName}}
+            <td>
+                {{admin.id}}
+                <button type="button" class="btn btn-outline-info btn-sm"  routerLink = "/updateAdmin/{{admin.id}}">Update</button>
+                <button type="button" class="btn btn-outline-info btn-sm"  routerLink = "/getAdminById/{{admin.id}}">View </button>
+                <button (click) = "deleteAdmin(admin.id)"  class="btn btn-danger" type="submit">Delete</button>
+
+               <!-- <button type="button" class="btn btn-outline-danger btn-sm"  routerLink = "/deleteAdminById/{{admin.id}}">Delete </button> -->
+
+                <!-- <button  (click) = "updateAdmin(admin.id)"   class="btn btn-info">Update</button>
+                <button  (click) = "getAdminById(admin.id)"   class="btn btn-info">View</button> -->
+
             </td>
+             <td *ngFor = "let patient of admin.patients" > 
+                {{patient.patientName}}
+            
+            </td>
+
             <td *ngFor = "let doctors of admin.doctors"> 
                 {{doctors.doctorName}}
                 
-            </td>
+            </td> 
+            
         </tr>
     </tbody>
 </table>

@@ -11,6 +11,10 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { AdminComponent } from './admin/admin.component';
 import { DoctorComponent } from './doctor/doctor.component';
 import { PatientComponent } from './patient/patient.component';
+import { DoctorListComponent } from './doctor-list/doctor-list.component';
+import { FormsModule } from '@angular/forms';
+import { UpdateAdminComponent } from './update-admin/update-admin.component';
+import { GetAdminByIdComponent } from './get-admin-by-id/get-admin-by-id.component';
 
 @NgModule({
   declarations: [
@@ -21,12 +25,16 @@ import { PatientComponent } from './patient/patient.component';
     MainPageComponent,
     AdminComponent,
     DoctorComponent,
-    PatientComponent
-  ],
+    PatientComponent,
+    DoctorListComponent,
+    UpdateAdminComponent,
+    GetAdminByIdComponent
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

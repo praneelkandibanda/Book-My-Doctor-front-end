@@ -1,0 +1,31 @@
+<p>update-admin works!</p>
+<div class="col-md-8 offset-md-3">
+    <h3> Update Admin</h3>
+    <form (ngSubmit)="  updateAdmin()">
+    
+        <div class ="form-group">
+            <label>Name: </label>
+           <input type="text" class="form-control" id="adminName" [(ngModel)]= "adminDetails.adminName" name="adminName">
+            
+        </div>
+        <div class ="form-group">
+            <label>contactNumber: </label>
+           <input type="text" class="form-control" id="contactNumber" [(ngModel)]= "adminDetails.contactNumber" name="contactNumber">
+            
+        </div>
+    
+        <div class ="form-group">
+            <label>email: </label>
+           <input type="text" class="form-control" id="email" [(ngModel)]= "adminDetails.email" name="email">
+        </div>
+    
+        <div class ="form-group">
+            <label>password: </label>
+           <input type="text" class="form-control" id="password" [(ngModel)]= "adminDetails.password" name="password">
+        </div>
+    
+        <button type="submit" class="btn btn-success">Submit</button>
+    
+    
+    </form>
+    </div>

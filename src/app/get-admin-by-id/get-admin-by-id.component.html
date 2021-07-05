@@ -1,0 +1,24 @@
+<!-- <p>get-admin-by-id works!</p> -->
+<div style="text-align: center">
+    <!-- <h1>Get your Account Details</h1> -->
+    <!-- <h3>Enter your Admin Id:</h3>
+    <input #id type="number" name="id">
+    <button class="btn btn-info btn-sm" type="submit" (click)="getAdmin(id.value)">Get Admin Details</button>
+    <br>
+
+    <div [style.display]="admin.id ? 'block': 'none'"> -->
+
+        <div class="cards" *ngIf="admin">
+
+        <h3>View Details!!</h3>
+        <h3>Admin Name: {{admin.adminName}}</h3>
+        <h3>Mobile Number: {{admin.contactNumber}}</h3>
+        <h3>Email: {{admin.email}}</h3>
+    </div>
+    <footer class="footer">
+        <button   type="button" class="btn btn-info " routerLink="/getAdminList">Back</button>
+        
+        <button   type="button" class="btn btn-info " routerLink="/main-page">Return HomePage</button> 
+  </footer>
+
+</div>
